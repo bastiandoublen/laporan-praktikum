@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="300" rx="16" fill="#f6f8fa"/>
+  <defs>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f6feb"/>
+    </marker>
+  </defs>
+  <g font-size="20" fill="#1f2328">
+    <g transform="translate(40,60)">
+      <rect width="230" height="150" rx="12" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+      <text x="115" y="48" text-anchor="middle" font-weight="700">Modul dosen</text>
+      <text x="115" y="82" text-anchor="middle" font-size="16" fill="#57606a">PDF / DOCX</text>
+      <text x="115" y="110" text-anchor="middle" font-size="16" fill="#57606a">tujuan, latihan, tugas</text>
+    </g>
+    <g transform="translate(330,60)">
+      <rect width="230" height="150" rx="12" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+      <text x="115" y="48" text-anchor="middle" font-weight="700">Kode Python</text>
+      <text x="115" y="82" text-anchor="middle" font-size="16" fill="#57606a">NIM_nama.py per nomor</text>
+      <text x="115" y="110" text-anchor="middle" font-size="16" fill="#57606a">dijalankan sampai lolos</text>
+    </g>
+    <g transform="translate(620,60)">
+      <rect width="230" height="150" rx="12" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+      <text x="115" y="48" text-anchor="middle" font-weight="700">Screenshot IDE</text>
+      <text x="115" y="82" text-anchor="middle" font-size="16" fill="#57606a">Antigravity / VS Code</text>
+      <text x="115" y="110" text-anchor="middle" font-size="16" fill="#57606a">kode, output, GUI</text>
+    </g>
+    <g transform="translate(910,60)">
+      <rect width="250" height="150" rx="12" fill="#1f6feb"/>
+      <text x="125" y="48" text-anchor="middle" font-weight="700" fill="#ffffff">Laporan .docx</text>
+      <text x="125" y="82" text-anchor="middle" font-size="16" fill="#dbe9ff">struktur A sampai E</text>
+      <text x="125" y="110" text-anchor="middle" font-size="16" fill="#dbe9ff">daftar isi + pustaka APA</text>
+    </g>
+  </g>
+  <g stroke="#1f6feb" stroke-width="3" marker-end="url(#panah)">
+    <line x1="274" y1="135" x2="324" y2="135"/>
+    <line x1="564" y1="135" x2="614" y2="135"/>
+    <line x1="854" y1="135" x2="904" y2="135"/>
+  </g>
+  <text x="600" y="258" text-anchor="middle" font-size="17" fill="#57606a">Satu prompt ke agent AI, laporan praktikum rapi sesuai format kampus.</text>
+</svg>
