@@ -1,0 +1,2885 @@
+{
+ "identitas": {
+  "nama": "Nama Mahasiswa",
+  "nim": "2025XXXXX",
+  "mata_kuliah": "Pemrograman Berorientasi Objek",
+  "kota_tanggal": "Bontang, November 2026"
+ },
+ "kata_pengantar": "Puji syukur ke hadirat Tuhan Yang Maha Esa karena atas rahmat dan karunia-Nya, sehingga penulis dapat menyelesaikan laporan Praktikum Pemrograman Berorientasi Objek ini dengan baik dan tepat waktu. Laporan ini disusun sebagai salah satu bentuk pertanggungjawaban serta pemenuhan tugas dalam mata kuliah Praktikum Pemrograman Berorientasi Objek. Melalui praktikum ini, penulis memperoleh pemahaman mengenai konsep dasar pemrograman berorientasi objek, seperti class, object, constructor, enkapsulasi, relasi antar-class, pewarisan, polimorfisme, abstraksi, penanganan exception, dan aplikasi GUI dengan Tkinter, serta penerapannya dalam bahasa Python untuk memecahkan masalah secara sistematis dan efisien. Penulis menyadari bahwa dalam penyusunan laporan ini masih terdapat berbagai kekurangan, baik dari segi penulisan maupun isi materi. Oleh karena itu, penulis mengharapkan kritik dan saran yang membangun demi perbaikan dan penyempurnaan laporan di masa yang akan datang. Penulis juga mengucapkan terima kasih kepada dosen pengampu mata kuliah, asisten praktikum, serta semua pihak yang telah memberikan bimbingan, arahan, dan dukungan selama pelaksanaan praktikum hingga penyusunan laporan ini dapat diselesaikan. Semoga laporan ini bermanfaat bagi penulis maupun pembaca dalam menambah wawasan dan pemahaman mengenai pemrograman berorientasi objek.",
+ "kode_dir": "C:\\Users\\<user>\\Documents\\praktikum\\pbo",
+ "alat": [
+  "Laptop pribadi",
+  "Antigravity IDE",
+  "Python 3.12",
+  "GitHub"
+ ],
+ "kegiatan": "Kegiatan praktikum {judul} pada mata kuliah {mata_kuliah} dilaksanakan pada [hari, tanggal] pukul [jam] di laboratorium Pemrograman Kampus Utama STITEK meja nomor [nomor meja], menggunakan laptop pribadi.",
+ "image_width_cm": 10.0,
+ "split_code_lines": 19,
+ "modul": [
+  {
+   "judul": "Modul 1. Konsep Dasar OOP",
+   "tujuan": [
+    "Mampu memahami perbedaan paradigma pemrograman prosedural dan berorientasi objek.",
+    "Dapat membuat class dan object dalam Python.",
+    "Mampu mengimplementasikan constructor, atribut, dan instance methods."
+   ],
+   "teori": [
+    {
+     "judul": "Pengertian Pemrograman Berorientasi Objek",
+     "paragraf": [
+      "Pemrograman Berorientasi Objek (Object-Oriented Programming/OOP) adalah paradigma pemrograman yang menjadikan objek sebagai entitas utama dalam pengembangan perangkat lunak. Setiap objek memiliki data yang disebut atribut dan perilaku yang disebut method. Dengan memecah program menjadi class-class yang terpisah, kode menjadi lebih modular, mudah dipelihara, dan dapat digunakan ulang. Pendekatan ini banyak dipakai pada pengembangan sistem nyata, misalnya sistem informasi showroom mobil yang dibangun menggunakan pemrograman berbasis objek sehingga setiap bagian sistem dapat dikelola secara terpisah (Fakhri dkk., 2018)."
+     ]
+    },
+    {
+     "judul": "Python sebagai Bahasa Berorientasi Objek",
+     "paragraf": [
+      "Python merupakan bahasa yang mendukung paradigma berorientasi objek secara penuh dan sering digunakan untuk mengenalkan konsep class, object, enkapsulasi, pewarisan, dan polimorfisme kepada pemula karena sintaksnya sederhana dan mudah dibaca (Ritonga dkk., 2026)."
+     ]
+    },
+    {
+     "judul": "Class, Object, Constructor, dan Atribut",
+     "paragraf": [
+      "Class adalah cetakan (blueprint) yang mendefinisikan atribut dan method, sedangkan object adalah instance nyata dari class tersebut. Di Python, constructor ditulis sebagai method khusus __init__() yang dijalankan otomatis saat objek dibuat untuk memberi nilai awal atribut. Parameter self merujuk ke objek yang sedang diproses sehingga setiap objek menyimpan atribut instance miliknya sendiri. Selain itu terdapat class attribute yang nilainya dimiliki bersama oleh seluruh objek dari class yang sama (Lott & Phillips, 2021)."
+     ]
+    }
+   ],
+   "praktik": [
+    {
+     "item": "Perbedaan Paradigma Prosedural vs OOP",
+     "isi": [
+      {
+       "item": "Praktik contoh kode",
+       "isi": [
+        {
+         "item": "File: 2025XXXXX_Prosedural.py",
+         "isi": [
+          {
+           "kode": "modul1/nomor_1/2025XXXXX_Prosedural.py"
+          }
+         ]
+        },
+        {
+         "item": "File: 2025XXXXX_OOP.py",
+         "isi": [
+          {
+           "kode": "modul1/nomor_1/2025XXXXX_OOP.py"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "item": "Print screen hasil eksekusi program",
+       "isi": [
+        {
+         "item": "File: 2025XXXXX_Prosedural.py",
+         "isi": [
+          {
+           "output": "modul1/nomor_1/2025XXXXX_Prosedural.py"
+          }
+         ]
+        },
+        {
+         "item": "File: 2025XXXXX_OOP.py",
+         "isi": [
+          {
+           "output": "modul1/nomor_1/2025XXXXX_OOP.py"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "item": "Analisis perbedaan kedua pendekatan",
+       "isi": [
+        {
+         "teks": "Program ini menghitung luas dan keliling persegi menggunakan dua fungsi terpisah. Data sisi disimpan pada variabel global lalu dikirim sebagai parameter ke setiap fungsi. Data dan fungsi tidak terikat satu sama lain, sehingga jika jumlah bangun datar bertambah, variabel dan fungsi juga harus ditambah satu per satu."
+        },
+        {
+         "teks": "Program ini menghasilkan output yang sama dengan pendekatan prosedural, yaitu luas 25 dan keliling 20. Bedanya, data sisi dan method hitung_luas() serta hitung_keliling() dibungkus dalam satu class Persegi. Objek persegi menyimpan nilai sisinya sendiri melalui self.sisi, sehingga method tidak perlu menerima parameter lagi."
+        },
+        {
+         "teks": "Perbedaan kedua pendekatan: pada prosedural, data dan fungsi terpisah sehingga cocok untuk program kecil. Pada OOP, data dan perilaku disatukan dalam objek sehingga lebih mudah dikembangkan, misalnya membuat banyak objek Persegi dengan sisi berbeda tanpa menulis ulang fungsi."
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul1/nomor_1]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "item": "Konsep Class dan Object",
+     "isi": [
+      {
+       "teks": "File: 2025XXXXX_class_object.py"
+      },
+      {
+       "kode": "modul1/nomor_2/2025XXXXX_class_object.py"
+      },
+      {
+       "output": "modul1/nomor_2/2025XXXXX_class_object.py"
+      },
+      {
+       "item": "Buat class Dosen dengan atribut nama dan nidn.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_dosen_class_object.py"
+        },
+        {
+         "kode": "modul1/nomor_2/2025XXXXX_dosen_class_object.py",
+         "dari": 3,
+         "sampai": 6
+        }
+       ]
+      },
+      {
+       "item": "Tambahkan method ajar_mata_kuliah() yang menerima parameter mata_kuliah.",
+       "isi": [
+        {
+         "kode": "modul1/nomor_2/2025XXXXX_dosen_class_object.py",
+         "dari": 8,
+         "sampai": 9
+        }
+       ]
+      },
+      {
+       "item": "Instansiasi 2 object dosen dan panggil methodnya.",
+       "isi": [
+        {
+         "kode": "modul1/nomor_2/2025XXXXX_dosen_class_object.py",
+         "dari": 12,
+         "sampai": 18
+        }
+       ]
+      },
+      {
+       "item": "Capture hasil eksekusi program",
+       "isi": [
+        {
+         "output": "modul1/nomor_2/2025XXXXX_dosen_class_object.py"
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul1/nomor_2]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "item": "Constructor dan Atribut",
+     "isi": [
+      {
+       "teks": "File: 2025XXXXX_constructor_atribut.py"
+      },
+      {
+       "kode": "modul1/nomor_3/2025XXXXX_constructor_atribut.py"
+      },
+      {
+       "output": "modul1/nomor_3/2025XXXXX_constructor_atribut.py"
+      },
+      {
+       "item": "Buat class Kendaraan dengan class attribute bahan_bakar.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_kendaraan_constructor_atribut.py"
+        },
+        {
+         "kode": "modul1/nomor_3/2025XXXXX_kendaraan_constructor_atribut.py",
+         "dari": 3,
+         "sampai": 5
+        }
+       ]
+      },
+      {
+       "item": "Gunakan constructor untuk inisialisasi merk, warna, dan tahun.",
+       "isi": [
+        {
+         "kode": "modul1/nomor_3/2025XXXXX_kendaraan_constructor_atribut.py",
+         "dari": 7,
+         "sampai": 11
+        }
+       ]
+      },
+      {
+       "item": "Demonstrasikan perbedaan akses instance attribute dan class attribute.",
+       "isi": [
+        {
+         "kode": "modul1/nomor_3/2025XXXXX_kendaraan_constructor_atribut.py",
+         "dari": 14,
+         "sampai": 27
+        }
+       ]
+      },
+      {
+       "item": "Capture hasil eksekusi program",
+       "isi": [
+        {
+         "output": "modul1/nomor_3/2025XXXXX_kendaraan_constructor_atribut.py"
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul1/nomor_3]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "item": "Instance Methods",
+     "isi": [
+      {
+       "teks": "File: 2025XXXXX_instance_methods.py"
+      },
+      {
+       "kode": "modul1/nomor_4/2025XXXXX_instance_methods.py"
+      },
+      {
+       "output": "modul1/nomor_4/2025XXXXX_instance_methods.py"
+      },
+      {
+       "item": "Buat class ManajerInventori dengan methods: tambah_barang, hapus_barang, lihat_inventori.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_manajer_inventori.py"
+        },
+        {
+         "kode": "modul1/nomor_4/2025XXXXX_manajer_inventori.py",
+         "dari": 3,
+         "sampai": 39
+        }
+       ]
+      },
+      {
+       "item": "Implementasikan penambahan dan pengurangan stok barang.",
+       "isi": [
+        {
+         "kode": "modul1/nomor_4/2025XXXXX_manajer_inventori.py",
+         "dari": 7,
+         "sampai": 30
+        }
+       ]
+      },
+      {
+       "item": "Demonstrasikan semua method yang telah dibuat.",
+       "isi": [
+        {
+         "kode": "modul1/nomor_4/2025XXXXX_manajer_inventori.py",
+         "dari": 42,
+         "sampai": 59
+        }
+       ]
+      },
+      {
+       "item": "Capture hasil eksekusi program",
+       "isi": [
+        {
+         "output": "modul1/nomor_4/2025XXXXX_manajer_inventori.py"
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul1/nomor_4]"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "tugas": {
+    "pengantar": "Buat program OOP sederhana dengan ketentuan berikut:",
+    "isi": [
+     {
+      "item": "Class : Mahasiswa",
+      "isi": [
+       {
+        "teks": "File: 2025XXXXX_Tugas_Modul1.py"
+       },
+       {
+        "kode": "modul1/tugas/2025XXXXX_Tugas_Modul1.py",
+        "dari": 3,
+        "sampai": 5
+       }
+      ]
+     },
+     {
+      "item": "Atribut :",
+      "isi": [
+       {
+        "item": "Instance attributes : nama, nim, jurusan, ipk",
+        "isi": [
+         {
+          "kode": "modul1/tugas/2025XXXXX_Tugas_Modul1.py",
+          "dari": 8,
+          "sampai": 12
+         }
+        ]
+       },
+       {
+        "item": "Class attribute : universitas (isi : \"STITEK Bontang\")",
+        "isi": [
+         {
+          "kode": "modul1/tugas/2025XXXXX_Tugas_Modul1.py",
+          "dari": 4,
+          "sampai": 5
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Methods :",
+      "isi": [
+       {
+        "item": "__init__(self, nama, nim, jurusan, ipk=0.0)",
+        "isi": [
+         {
+          "kode": "modul1/tugas/2025XXXXX_Tugas_Modul1.py",
+          "dari": 7,
+          "sampai": 12
+         }
+        ]
+       },
+       {
+        "item": "perkenalan_diri(self)",
+        "isi": [
+         {
+          "kode": "modul1/tugas/2025XXXXX_Tugas_Modul1.py",
+          "dari": 14,
+          "sampai": 20
+         }
+        ]
+       },
+       {
+        "item": "update_ipk(self, ipk_baru)",
+        "isi": [
+         {
+          "kode": "modul1/tugas/2025XXXXX_Tugas_Modul1.py",
+          "dari": 22,
+          "sampai": 28
+         }
+        ]
+       },
+       {
+        "item": "predikat_kelulusan(self)",
+        "isi": [
+         {
+          "kode": "modul1/tugas/2025XXXXX_Tugas_Modul1.py",
+          "dari": 30,
+          "sampai": 31
+         },
+         {
+          "item": "\"Cum Laude\" jika IPK ≥ 3.5",
+          "isi": [
+           {
+            "kode": "modul1/tugas/2025XXXXX_Tugas_Modul1.py",
+            "dari": 32,
+            "sampai": 33
+           }
+          ]
+         },
+         {
+          "item": "\"Sangat Memuaskan\" jika IPK ≥ 3.0",
+          "isi": [
+           {
+            "kode": "modul1/tugas/2025XXXXX_Tugas_Modul1.py",
+            "dari": 34,
+            "sampai": 35
+           }
+          ]
+         },
+         {
+          "item": "\"Memuaskan\" jika IPK ≥ 2.5",
+          "isi": [
+           {
+            "kode": "modul1/tugas/2025XXXXX_Tugas_Modul1.py",
+            "dari": 36,
+            "sampai": 37
+           }
+          ]
+         },
+         {
+          "item": "\"Lulus\" jika IPK ≥ 2.0",
+          "isi": [
+           {
+            "kode": "modul1/tugas/2025XXXXX_Tugas_Modul1.py",
+            "dari": 38,
+            "sampai": 41
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Instansiasi :",
+      "isi": [
+       {
+        "item": "Buat 3 object mahasiswa dengan data berbeda.",
+        "isi": [
+         {
+          "kode": "modul1/tugas/2025XXXXX_Tugas_Modul1.py",
+          "dari": 44,
+          "sampai": 64
+         }
+        ]
+       },
+       {
+        "item": "Demonstrasikan semua method yang ada.",
+        "isi": [
+         {
+          "kode": "modul1/tugas/2025XXXXX_Tugas_Modul1.py",
+          "dari": 66,
+          "sampai": 83
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Lakukan capture dan analisis, tulis di laporan kemudian simpan script di GitHub.",
+      "isi": [
+       {
+        "item": "Screen Capture",
+        "isi": [
+         {
+          "output": "modul1/tugas/2025XXXXX_Tugas_Modul1.py"
+         }
+        ]
+       },
+       {
+        "item": "Analisis",
+        "isi": [
+         {
+          "teks": "Class Mahasiswa memiliki class attribute universitas bernilai \"STITEK Bontang\" dan instance attribute nama, nim, jurusan, serta ipk yang diisi melalui constructor dengan nilai default ipk 0.0."
+         },
+         {
+          "teks": "Class ini juga memiliki tiga method. Method perkenalan_diri() menampilkan identitas mahasiswa, method update_ipk() mengubah IPK dengan validasi rentang 0.0 sampai 4.0. Predikat ditentukan oleh method predikat_kelulusan() berdasarkan IPK: Cum Laude (>= 3.5), Sangat Memuaskan (>= 3.0), Memuaskan (>= 2.5), dan Lulus (>= 2.0)."
+         },
+         {
+          "teks": "Tiga objek dibuat dengan IPK berbeda sehingga menghasilkan predikat Sangat Memuaskan, Memuaskan, dan Lulus. Setelah IPK objek pertama diubah menjadi 3.75, predikatnya berubah menjadi Cum Laude. Hal ini menunjukkan bahwa perubahan atribut lewat method langsung memengaruhi perilaku objek."
+         }
+        ]
+       },
+       {
+        "item": "Link GitHub",
+        "isi": [
+         {
+          "teks": "[link GitHub modul1/tugas]"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "judul": "Modul 2. Encapsulation & Access Modifier",
+   "tujuan": [
+    "Memahami konsep encapsulation dalam OOP.",
+    "Memahami penggunaan self dengan benar dalam method Python.",
+    "Menerapkan access modifier di Python (public, protected, private) dan memahami keterbatasannya.",
+    "Mampu mengimplementasikan relasi antar-class (aggregation, composition, association) secara dasar."
+   ],
+   "teori": [
+    {
+     "judul": "Encapsulation",
+     "paragraf": [
+      "Encapsulation adalah prinsip OOP yang menyatukan data (atribut) dan perilaku (method) dalam satu class serta membatasi akses langsung terhadap data tersebut. Tujuannya adalah menjaga konsistensi data karena perubahan hanya boleh dilakukan melalui method resmi seperti getter dan setter yang dilengkapi validasi. Penelitian empiris membedakan class encapsulation, yaitu anggota private dapat diakses oleh objek lain dari class yang sama, dan object encapsulation, yaitu anggota private hanya dapat diakses oleh objek itu sendiri (Voigt dkk., 2010)."
+     ]
+    },
+    {
+     "judul": "Access Modifier di Python",
+     "paragraf": [
+      "Berbeda dari Java atau C++, Python tidak memiliki kata kunci access modifier. Python memakai konvensi penamaan: atribut tanpa garis bawah bersifat public, satu garis bawah (_x) menandakan protected, dan dua garis bawah (__x) menandakan private. Atribut private diproses dengan name mangling menjadi _NamaClass__x, sehingga tidak bisa diakses dengan nama aslinya dari luar class, tetapi pada dasarnya masih dapat dijangkau. Karena itu privasi di Python lebih merupakan kesepakatan antarprogrammer daripada pembatasan mutlak (Lott & Phillips, 2021)."
+     ]
+    },
+    {
+     "judul": "Parameter self",
+     "paragraf": [
+      "Parameter self merepresentasikan objek yang sedang diproses. Melalui self, method dapat mengakses atribut instance, memanggil method lain di class yang sama, dan membedakan atribut objek dari variabel lokal (Lott & Phillips, 2021)."
+     ]
+    },
+    {
+     "judul": "Relasi antar Class",
+     "paragraf": [
+      "Class dapat memiliki relasi dengan class lain: association (objek hanya saling mengenal), aggregation (objek memiliki objek lain yang tetap dapat berdiri sendiri), dan composition (objek bagian dibuat dan dimiliki penuh oleh objek induk). Konsep enkapsulasi dan relasi ini termasuk materi inti pembelajaran OOP berbasis Python (Ritonga dkk., 2026)."
+     ]
+    }
+   ],
+   "praktik": [
+    {
+     "item": "Encapsulation OOP",
+     "isi": [
+      {
+       "item": "Praktik contoh kode",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_encapsulation.py"
+        },
+        {
+         "kode": "modul2/nomor_1/2025XXXXX_encapsulation.py"
+        }
+       ]
+      },
+      {
+       "item": "Print screen hasil eksekusi program",
+       "isi": [
+        {
+         "output": "modul2/nomor_1/2025XXXXX_encapsulation.py"
+        }
+       ]
+      },
+      {
+       "item": "Tambahkan method classify() yang mengembalikan \"Cum Laude\" jika GPA ≥ 3.5, \"Good\" jika 2.5 ≤ GPA < 3.5, dan \"Remedial\" jika GPA < 2.5.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_encapsulation_classify.py"
+        },
+        {
+         "kode": "modul2/nomor_1/2025XXXXX_encapsulation_classify.py",
+         "dari": 23,
+         "sampai": 28
+        },
+        {
+         "kode": "modul2/nomor_1/2025XXXXX_encapsulation_classify.py",
+         "dari": 31,
+         "sampai": 43
+        },
+        {
+         "output": "modul2/nomor_1/2025XXXXX_encapsulation_classify.py"
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul2/nomor_1]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "item": "Konsep Parameter self",
+     "isi": [
+      {
+       "teks": "File: 2025XXXXX_konsep_self.py"
+      },
+      {
+       "kode": "modul2/nomor_2/2025XXXXX_konsep_self.py"
+      },
+      {
+       "output": "modul2/nomor_2/2025XXXXX_konsep_self.py"
+      },
+      {
+       "item": "Tambahkan method jumlah_mahasiswa() yang mengembalikan jumlah mahasiswa.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_konsep_self_latihan.py"
+        },
+        {
+         "kode": "modul2/nomor_2/2025XXXXX_konsep_self_latihan.py",
+         "dari": 15,
+         "sampai": 16
+        }
+       ]
+      },
+      {
+       "item": "Buat 2 mata kuliah dan 3 mahasiswa lalu daftarkan mahasiswa ke masing-masing mata kuliah.",
+       "isi": [
+        {
+         "kode": "modul2/nomor_2/2025XXXXX_konsep_self_latihan.py",
+         "dari": 25,
+         "sampai": 39
+        }
+       ]
+      },
+      {
+       "item": "Tampilkan daftar mahasiswa dan jumlah mahasiswanya.",
+       "isi": [
+        {
+         "kode": "modul2/nomor_2/2025XXXXX_konsep_self_latihan.py",
+         "dari": 41,
+         "sampai": 45
+        }
+       ]
+      },
+      {
+       "item": "Capture hasil eksekusi program",
+       "isi": [
+        {
+         "output": "modul2/nomor_2/2025XXXXX_konsep_self_latihan.py"
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul2/nomor_2]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "item": "Access Modifier ala Python (Public, Protected, Private)",
+     "isi": [
+      {
+       "teks": "File: 2025XXXXX_access_modifier.py"
+      },
+      {
+       "kode": "modul2/nomor_3/2025XXXXX_access_modifier.py"
+      },
+      {
+       "output": "modul2/nomor_3/2025XXXXX_access_modifier.py"
+      },
+      {
+       "item": "Buat class Mahasiswa dengan ketentuan nim dan nama public, semester protected, dan IPK private.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_mahasiswa_access_modifier.py"
+        },
+        {
+         "kode": "modul2/nomor_3/2025XXXXX_mahasiswa_access_modifier.py",
+         "dari": 3,
+         "sampai": 30
+        }
+       ]
+      },
+      {
+       "item": "Buat 2 objek Mahasiswa dan tampilkan nim, nama, semester, dan IPK.",
+       "isi": [
+        {
+         "kode": "modul2/nomor_3/2025XXXXX_mahasiswa_access_modifier.py",
+         "dari": 33,
+         "sampai": 38
+        }
+       ]
+      },
+      {
+       "item": "Ganti semester dan IPK.",
+       "isi": [
+        {
+         "kode": "modul2/nomor_3/2025XXXXX_mahasiswa_access_modifier.py",
+         "dari": 40,
+         "sampai": 47
+        }
+       ]
+      },
+      {
+       "item": "Capture hasil eksekusi program dan analisis perbedaan public, protected, dan private beserta getter dan setter.",
+       "isi": [
+        {
+         "kode": "modul2/nomor_3/2025XXXXX_mahasiswa_access_modifier.py",
+         "dari": 49,
+         "sampai": 56
+        },
+        {
+         "output": "modul2/nomor_3/2025XXXXX_mahasiswa_access_modifier.py"
+        },
+        {
+         "teks": "Atribut nim dan nama bersifat public sehingga bebas diakses dari luar class. Atribut _semester bersifat protected; secara teknis masih bisa diakses langsung, tetapi garis bawah menandakan atribut ini sebaiknya hanya diubah lewat get_semester() dan set_semester(). Atribut __ipk bersifat private, sehingga mengakses mhs1.__ipk secara langsung menghasilkan AttributeError akibat name mangling, sedangkan nama hasil mangling _Mahasiswa__ipk masih dapat dibaca."
+        },
+        {
+         "teks": "Getter berfungsi membaca nilai atribut tanpa mengekspos atribut secara langsung, sedangkan setter mengubah nilai disertai validasi (semester 1 sampai 14 dan IPK 0.0 sampai 4.0). Dengan begitu data kedua mahasiswa tetap konsisten saat semester dan IPK diubah."
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul2/nomor_3]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "item": "Relasi antar Class",
+     "isi": [
+      {
+       "teks": "File: 2025XXXXX_relasi.py"
+      },
+      {
+       "kode": "modul2/nomor_4/2025XXXXX_relasi.py"
+      },
+      {
+       "output": "modul2/nomor_4/2025XXXXX_relasi.py"
+      },
+      {
+       "item": "Tambahkan 2 Program Studi baru ke objek universitas yang sudah ada pada contoh.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_relasi_latihan.py"
+        },
+        {
+         "kode": "modul2/nomor_4/2025XXXXX_relasi_latihan.py",
+         "dari": 64,
+         "sampai": 76
+        }
+       ]
+      },
+      {
+       "item": "Pada masing-masing Program Studi, tambahkan minimal 2 Mata Kuliah.",
+       "isi": [
+        {
+         "kode": "modul2/nomor_4/2025XXXXX_relasi_latihan.py",
+         "dari": 70,
+         "sampai": 76
+        }
+       ]
+      },
+      {
+       "item": "Buat 3 Mahasiswa, lalu buat beberapa objek Nilai dan tambahkan ke mahasiswa dengan tambah_nilai().",
+       "isi": [
+        {
+         "kode": "modul2/nomor_4/2025XXXXX_relasi_latihan.py",
+         "dari": 78,
+         "sampai": 90
+        }
+       ]
+      },
+      {
+       "item": "Tampilkan daftar mata kuliah dari setiap Program Studi.",
+       "isi": [
+        {
+         "kode": "modul2/nomor_4/2025XXXXX_relasi_latihan.py",
+         "dari": 94,
+         "sampai": 99
+        }
+       ]
+      },
+      {
+       "item": "Tampilkan daftar nilai untuk setiap mahasiswa.",
+       "isi": [
+        {
+         "kode": "modul2/nomor_4/2025XXXXX_relasi_latihan.py",
+         "dari": 101,
+         "sampai": 105
+        }
+       ]
+      },
+      {
+       "item": "Tambahkan method rata_rata() pada class Mahasiswa, kemudian tampilkan rata-rata nilai setiap mahasiswa.",
+       "isi": [
+        {
+         "kode": "modul2/nomor_4/2025XXXXX_relasi_latihan.py",
+         "dari": 19,
+         "sampai": 22
+        },
+        {
+         "kode": "modul2/nomor_4/2025XXXXX_relasi_latihan.py",
+         "dari": 106,
+         "sampai": 106
+        }
+       ]
+      },
+      {
+       "item": "Panggil fungsi report_program untuk setiap Program Studi.",
+       "isi": [
+        {
+         "kode": "modul2/nomor_4/2025XXXXX_relasi_latihan.py",
+         "dari": 108,
+         "sampai": 111
+        }
+       ]
+      },
+      {
+       "item": "Capture hasil eksekusi program",
+       "isi": [
+        {
+         "output": "modul2/nomor_4/2025XXXXX_relasi_latihan.py"
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul2/nomor_4]"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "tugas": {
+    "pengantar": "Buat program OOP Perpustakaan sederhana dengan ketentuan berikut:",
+    "isi": [
+     {
+      "item": "Class yang harus dibuat: Buku, Anggota, dan Peminjaman, ditambah Perpustakaan untuk relasi composition.",
+      "isi": [
+       {
+        "teks": "File: 2025XXXXX_Tugas_Modul2.py"
+       }
+      ]
+     },
+     {
+      "item": "Atribut Class Buku :",
+      "isi": [
+       {
+        "item": "Public: judul, penulis, kode_buku",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 8,
+          "sampai": 10
+         }
+        ]
+       },
+       {
+        "item": "Protected: _stok",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 11,
+          "sampai": 11
+         }
+        ]
+       },
+       {
+        "item": "Private: __lokasi_rak",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 12,
+          "sampai": 12
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Atribut Class Anggota :",
+      "isi": [
+       {
+        "item": "Public: id_anggota, nama",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 57,
+          "sampai": 58
+         }
+        ]
+       },
+       {
+        "item": "Protected: _maks_pinjam",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 59,
+          "sampai": 59
+         }
+        ]
+       },
+       {
+        "item": "Private: __status_aktif",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 60,
+          "sampai": 60
+         }
+        ]
+       },
+       {
+        "item": "Aggregation: daftar_peminjaman",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 61,
+          "sampai": 61
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Atribut Class Peminjaman : kode_buku, tanggal_pinjam, tanggal_kembali, status",
+      "isi": [
+       {
+        "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+        "dari": 40,
+        "sampai": 47
+       }
+      ]
+     },
+     {
+      "item": "Methods :",
+      "isi": [
+       {
+        "item": "Class Buku :",
+        "isi": [
+         {
+          "item": "getter/setter lokasi rak",
+          "isi": [
+           {
+            "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+            "dari": 14,
+            "sampai": 20
+           }
+          ]
+         },
+         {
+          "item": "tambah_stok, kurangi_stok",
+          "isi": [
+           {
+            "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+            "dari": 25,
+            "sampai": 33
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "item": "Class Anggota :",
+        "isi": [
+         {
+          "item": "getter/setter status",
+          "isi": [
+           {
+            "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+            "dari": 63,
+            "sampai": 67
+           }
+          ]
+         },
+         {
+          "item": "pinjam_buku(), kembalikan_buku()",
+          "isi": [
+           {
+            "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+            "dari": 72,
+            "sampai": 88
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "item": "Class Peminjaman : info_peminjaman()",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 49,
+          "sampai": 52
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Relasi antar class :",
+      "isi": [
+       {
+        "item": "Buku ↔ Peminjaman (association)",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 40,
+          "sampai": 44
+         }
+        ]
+       },
+       {
+        "item": "Anggota ↔ Peminjaman (aggregation)",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 72,
+          "sampai": 79
+         }
+        ]
+       },
+       {
+        "item": "Perpustakaan ↔ Buku (composition)",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 96,
+          "sampai": 105
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Instansiasi :",
+      "isi": [
+       {
+        "item": "Buat 3 buku",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 115,
+          "sampai": 118
+         }
+        ]
+       },
+       {
+        "item": "Buat 2 anggota",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 120,
+          "sampai": 122
+         }
+        ]
+       },
+       {
+        "item": "Anggota 1 pinjam 2 buku",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 129,
+          "sampai": 131
+         }
+        ]
+       },
+       {
+        "item": "Anggota 2 pinjam 1 buku",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 132,
+          "sampai": 133
+         }
+        ]
+       },
+       {
+        "item": "Pengembalian buku",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 139,
+          "sampai": 140
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Demonstrasikan program dengan menggunakan print() :",
+      "isi": [
+       {
+        "item": "Informasi buku dan stoknya",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 124,
+          "sampai": 126
+         }
+        ]
+       },
+       {
+        "item": "Informasi anggota",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 145,
+          "sampai": 147
+         }
+        ]
+       },
+       {
+        "item": "Daftar peminjaman masing-masing anggota",
+        "isi": [
+         {
+          "kode": "modul2/tugas/2025XXXXX_Tugas_Modul2.py",
+          "dari": 149,
+          "sampai": 153
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Lakukan capture dan analisis, tulis di laporan kemudian simpan script di GitHub.",
+      "isi": [
+       {
+        "item": "Screen Capture",
+        "isi": [
+         {
+          "output": "modul2/tugas/2025XXXXX_Tugas_Modul2.py"
+         }
+        ]
+       },
+       {
+        "item": "Analisis",
+        "isi": [
+         {
+          "teks": "Class Buku memiliki atribut public judul, penulis, dan kode_buku, atribut protected _stok, dan atribut private __lokasi_rak yang diakses melalui getter dan setter. Method tambah_stok() dan kurangi_stok() menjaga stok tidak negatif."
+         },
+         {
+          "teks": "Class Anggota memiliki atribut public id_anggota dan nama, atribut protected _maks_pinjam, atribut private __status_aktif, serta atribut daftar_peminjaman. Method pinjam_buku() memeriksa status aktif dan batas pinjam sebelum mengurangi stok, sedangkan kembalikan_buku() mengubah status peminjaman dan menambah stok kembali."
+         },
+         {
+          "teks": "Relasi yang diterapkan: Perpustakaan dan Buku adalah composition karena buku dibuat melalui tambah_buku() dan disimpan dalam koleksi perpustakaan. Anggota dan Peminjaman adalah aggregation karena anggota menampung objek peminjaman dalam daftar_peminjaman. Buku dan Peminjaman adalah association karena peminjaman hanya menyimpan referensi ke buku."
+         },
+         {
+          "teks": "Pada output terlihat stok berkurang saat Anggota 1 meminjam dua buku dan Anggota 2 meminjam satu buku, lalu stok bertambah kembali saat buku dikembalikan. Setter set_status(False) membuat Nadia tidak dapat meminjam lagi, yang menunjukkan validasi berjalan melalui method, bukan akses langsung ke atribut private."
+         }
+        ]
+       },
+       {
+        "item": "Link GitHub",
+        "isi": [
+         {
+          "teks": "[link GitHub modul2/tugas]"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "judul": "Modul 3. Inheritance & Polymorphism",
+   "tujuan": [
+    "Memahami konsep inheritance (pewarisan) dalam OOP.",
+    "Mampu mengimplementasikan single inheritance dan menggunakan fungsi super().",
+    "Memahami dan menerapkan method overriding.",
+    "Mampu mendemonstrasikan polymorphism dan duck typing.",
+    "Memahami dan mengimplementasikan composition sebagai relasi lanjutan antar class."
+   ],
+   "teori": [
+    {
+     "judul": "Inheritance (Pewarisan)",
+     "paragraf": [
+      "Inheritance adalah mekanisme ketika sebuah class turunan (subclass) mewarisi atribut dan method dari class induk (superclass), sehingga perilaku umum cukup ditulis sekali lalu digunakan ulang. Di Python, fungsi super() dipakai untuk memanggil constructor atau method milik superclass agar inisialisasi atribut induk tetap konsisten. Studi empiris terhadap puluhan program Java open source menunjukkan bahwa pewarisan dipakai secara luas dalam perangkat lunak nyata, baik untuk menggunakan ulang kode maupun untuk membentuk hierarki tipe (Tempero dkk., 2008)."
+     ]
+    },
+    {
+     "judul": "Polymorphism, Method Overriding, dan Duck Typing",
+     "paragraf": [
+      "Polymorphism berarti satu pemanggilan method yang sama dapat direspons dengan cara berbeda oleh objek dari class yang berbeda. Method overriding terjadi ketika subclass mendefinisikan ulang method milik superclass. Python juga menerapkan duck typing, yaitu objek dinilai dari method yang dimilikinya, bukan dari class induknya, sehingga dua class yang tidak berhubungan tetap dapat diproses oleh fungsi yang sama (Lott & Phillips, 2021)."
+     ]
+    },
+    {
+     "judul": "Composition",
+     "paragraf": [
+      "Composition adalah relasi has-a, yaitu sebuah class memiliki objek dari class lain sebagai atributnya. Berbeda dengan inheritance yang membentuk hierarki is-a, composition membuat setiap class fokus pada satu tanggung jawab dan lebih mudah diganti tanpa mengubah class pemiliknya (Lott & Phillips, 2021)."
+     ]
+    }
+   ],
+   "praktik": [
+    {
+     "item": "Inheritance (Pewarisan)",
+     "isi": [
+      {
+       "item": "Silahkan praktikkan contoh code di atas.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_inheritance.py"
+        },
+        {
+         "kode": "modul3/nomor_1/2025XXXXX_inheritance.py"
+        },
+        {
+         "output": "modul3/nomor_1/2025XXXXX_inheritance.py"
+        }
+       ]
+      },
+      {
+       "item": "Buat class Person dengan atribut nama dan umur.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_person_mahasiswa.py"
+        },
+        {
+         "kode": "modul3/nomor_1/2025XXXXX_person_mahasiswa.py",
+         "dari": 3,
+         "sampai": 9
+        }
+       ]
+      },
+      {
+       "item": "Buat class Mahasiswa yang mewarisi Person, tambahkan atribut nim.",
+       "isi": [
+        {
+         "kode": "modul3/nomor_1/2025XXXXX_person_mahasiswa.py",
+         "dari": 11,
+         "sampai": 14
+        }
+       ]
+      },
+      {
+       "item": "Gunakan super() untuk inisialisasi atribut dari parent class.",
+       "isi": [
+        {
+         "kode": "modul3/nomor_1/2025XXXXX_person_mahasiswa.py",
+         "dari": 12,
+         "sampai": 17
+        }
+       ]
+      },
+      {
+       "item": "Instansiasi objek dan panggil method info().",
+       "isi": [
+        {
+         "kode": "modul3/nomor_1/2025XXXXX_person_mahasiswa.py",
+         "dari": 19,
+         "sampai": 29
+        }
+       ]
+      },
+      {
+       "item": "Capture hasil eksekusi program",
+       "isi": [
+        {
+         "output": "modul3/nomor_1/2025XXXXX_person_mahasiswa.py"
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul3/nomor_1]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "item": "Method Overriding",
+     "isi": [
+      {
+       "teks": "File: 2025XXXXX_override.py"
+      },
+      {
+       "kode": "modul3/nomor_2/2025XXXXX_override.py"
+      },
+      {
+       "output": "modul3/nomor_2/2025XXXXX_override.py"
+      },
+      {
+       "item": "Buat class Bentuk dengan method luas() yang mengembalikan 0.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_bentuk_override.py"
+        },
+        {
+         "kode": "modul3/nomor_2/2025XXXXX_bentuk_override.py",
+         "dari": 5,
+         "sampai": 7
+        }
+       ]
+      },
+      {
+       "item": "Buat class Persegi dan Lingkaran yang meng-override method luas().",
+       "isi": [
+        {
+         "kode": "modul3/nomor_2/2025XXXXX_bentuk_override.py",
+         "dari": 9,
+         "sampai": 21
+        }
+       ]
+      },
+      {
+       "item": "Demonstrasikan pemanggilan method luas() dari objek masing-masing class.",
+       "isi": [
+        {
+         "kode": "modul3/nomor_2/2025XXXXX_bentuk_override.py",
+         "dari": 23,
+         "sampai": 27
+        }
+       ]
+      },
+      {
+       "item": "Capture hasil eksekusi program",
+       "isi": [
+        {
+         "output": "modul3/nomor_2/2025XXXXX_bentuk_override.py"
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul3/nomor_2]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "item": "Polymorphism & Duck Typing",
+     "isi": [
+      {
+       "teks": "File: 2025XXXXX_duck_typing.py"
+      },
+      {
+       "kode": "modul3/nomor_3/2025XXXXX_duck_typing.py"
+      },
+      {
+       "output": "modul3/nomor_3/2025XXXXX_duck_typing.py"
+      },
+      {
+       "item": "Buat dua class berbeda (Laptop, Smartphone) dengan method nyalakan().",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_perangkat_duck_typing.py"
+        },
+        {
+         "kode": "modul3/nomor_3/2025XXXXX_perangkat_duck_typing.py",
+         "dari": 3,
+         "sampai": 15
+        }
+       ]
+      },
+      {
+       "item": "Buat fungsi tes_nyala(obj) yang memanggil method nyalakan().",
+       "isi": [
+        {
+         "kode": "modul3/nomor_3/2025XXXXX_perangkat_duck_typing.py",
+         "dari": 17,
+         "sampai": 18
+        }
+       ]
+      },
+      {
+       "item": "Demonstrasikan duck typing dengan memanggil fungsi tersebut untuk kedua objek.",
+       "isi": [
+        {
+         "kode": "modul3/nomor_3/2025XXXXX_perangkat_duck_typing.py",
+         "dari": 20,
+         "sampai": 25
+        }
+       ]
+      },
+      {
+       "item": "Capture hasil eksekusi program",
+       "isi": [
+        {
+         "output": "modul3/nomor_3/2025XXXXX_perangkat_duck_typing.py"
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul3/nomor_3]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "item": "Composition (Relasi Lanjutan)",
+     "isi": [
+      {
+       "teks": "File: 2025XXXXX_composition.py"
+      },
+      {
+       "kode": "modul3/nomor_4/2025XXXXX_composition.py"
+      },
+      {
+       "output": "modul3/nomor_4/2025XXXXX_composition.py"
+      },
+      {
+       "item": "Buat class Penulis dengan atribut nama.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_penulis_buku.py"
+        },
+        {
+         "kode": "modul3/nomor_4/2025XXXXX_penulis_buku.py",
+         "dari": 3,
+         "sampai": 5
+        }
+       ]
+      },
+      {
+       "item": "Buat class Buku yang memiliki Penulis (composition).",
+       "isi": [
+        {
+         "kode": "modul3/nomor_4/2025XXXXX_penulis_buku.py",
+         "dari": 7,
+         "sampai": 14
+        }
+       ]
+      },
+      {
+       "item": "Demonstrasikan cara mengakses data penulis dari objek buku.",
+       "isi": [
+        {
+         "kode": "modul3/nomor_4/2025XXXXX_penulis_buku.py",
+         "dari": 16,
+         "sampai": 25
+        }
+       ]
+      },
+      {
+       "item": "Capture hasil eksekusi program",
+       "isi": [
+        {
+         "output": "modul3/nomor_4/2025XXXXX_penulis_buku.py"
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul3/nomor_4]"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "tugas": {
+    "pengantar": "Buat program OOP sederhana dengan ketentuan berikut:",
+    "isi": [
+     {
+      "item": "Class Parent: Karyawan",
+      "isi": [
+       {
+        "teks": "File: 2025XXXXX_Tugas_Modul3.py"
+       },
+       {
+        "item": "Atribut: nama, gaji_pokok",
+        "isi": [
+         {
+          "kode": "modul3/tugas/2025XXXXX_Tugas_Modul3.py",
+          "dari": 3,
+          "sampai": 6
+         }
+        ]
+       },
+       {
+        "item": "Method: info_gaji()",
+        "isi": [
+         {
+          "kode": "modul3/tugas/2025XXXXX_Tugas_Modul3.py",
+          "dari": 8,
+          "sampai": 9
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Child Class: Manager (inherits Karyawan)",
+      "isi": [
+       {
+        "item": "Atribut tambahan: tunjangan",
+        "isi": [
+         {
+          "kode": "modul3/tugas/2025XXXXX_Tugas_Modul3.py",
+          "dari": 11,
+          "sampai": 14
+         }
+        ]
+       },
+       {
+        "item": "Override method info_gaji() untuk menampilkan gaji total (gaji_pokok + tunjangan)",
+        "isi": [
+         {
+          "kode": "modul3/tugas/2025XXXXX_Tugas_Modul3.py",
+          "dari": 16,
+          "sampai": 18
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Child Class: Programmer (inherits Karyawan)",
+      "isi": [
+       {
+        "item": "Atribut tambahan: bonus",
+        "isi": [
+         {
+          "kode": "modul3/tugas/2025XXXXX_Tugas_Modul3.py",
+          "dari": 20,
+          "sampai": 23
+         }
+        ]
+       },
+       {
+        "item": "Override method info_gaji() untuk menampilkan gaji total (gaji_pokok + bonus)",
+        "isi": [
+         {
+          "kode": "modul3/tugas/2025XXXXX_Tugas_Modul3.py",
+          "dari": 25,
+          "sampai": 27
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Composition:",
+      "isi": [
+       {
+        "item": "Buat class Departemen yang memiliki daftar karyawan (list of objects)",
+        "isi": [
+         {
+          "kode": "modul3/tugas/2025XXXXX_Tugas_Modul3.py",
+          "dari": 29,
+          "sampai": 32
+         }
+        ]
+       },
+       {
+        "item": "Method: tambah_karyawan(karyawan), tampilkan_karyawan()",
+        "isi": [
+         {
+          "kode": "modul3/tugas/2025XXXXX_Tugas_Modul3.py",
+          "dari": 34,
+          "sampai": 40
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Instansiasi:",
+      "isi": [
+       {
+        "item": "Buat 2 Manager dan 2 Programmer",
+        "isi": [
+         {
+          "kode": "modul3/tugas/2025XXXXX_Tugas_Modul3.py",
+          "dari": 42,
+          "sampai": 46
+         }
+        ]
+       },
+       {
+        "item": "Tambahkan ke dalam departemen",
+        "isi": [
+         {
+          "kode": "modul3/tugas/2025XXXXX_Tugas_Modul3.py",
+          "dari": 48,
+          "sampai": 50
+         }
+        ]
+       },
+       {
+        "item": "Tampilkan info gaji semua karyawan",
+        "isi": [
+         {
+          "kode": "modul3/tugas/2025XXXXX_Tugas_Modul3.py",
+          "dari": 52,
+          "sampai": 52
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Capture hasil eksekusi dan analisis",
+      "isi": [
+       {
+        "item": "Screen Capture",
+        "isi": [
+         {
+          "output": "modul3/tugas/2025XXXXX_Tugas_Modul3.py"
+         }
+        ]
+       },
+       {
+        "item": "Analisis",
+        "isi": [
+         {
+          "teks": "Class Karyawan menjadi superclass yang menyimpan nama dan gaji_pokok serta method info_gaji(). Class Manager dan Programmer mewarisi Karyawan dan memanggil super().__init__() sehingga atribut induk tidak perlu ditulis ulang, lalu masing-masing menambah atribut tunjangan dan bonus."
+         },
+         {
+          "teks": "Kedua subclass meng-override info_gaji() untuk menghitung gaji total. Manager Andi Pratama mendapat Rp 12.000.000 (9.000.000 + 3.000.000), sedangkan Programmer Hendrik Wijaya mendapat Rp 8.500.000 (7.000.000 + 1.500.000)."
+         },
+         {
+          "teks": "Class Departemen menerapkan composition karena menyimpan daftar objek karyawan. Method tampilkan_karyawan() memanggil info_gaji() pada setiap objek tanpa memeriksa class-nya, dan setiap objek menjalankan versi method miliknya sendiri. Inilah polymorphism: satu pemanggilan menghasilkan perhitungan yang berbeda untuk Manager dan Programmer."
+         }
+        ]
+       },
+       {
+        "item": "Link GitHub",
+        "isi": [
+         {
+          "teks": "[link GitHub modul3/tugas]"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "judul": "Modul 4. Abstraction & Special Methods",
+   "tujuan": [
+    "Memahami dan menjelaskan konsep abstraksi dalam OOP.",
+    "Mengimplementasikan abstraksi menggunakan abstract class dan abstract method (modul abc).",
+    "Mengidentifikasi dan menggunakan special methods (dunder methods) dalam Python.",
+    "Mengembangkan class yang mendukung operasi khusus seperti __str__, __len__, __add__, dan lainnya."
+   ],
+   "teori": [
+    {
+     "judul": "Abstraction (Abstraksi)",
+     "paragraf": [
+      "Abstraksi adalah proses menyembunyikan detail implementasi dan hanya menampilkan fungsionalitas penting. Python tidak memiliki kata kunci abstract, tetapi menyediakan modul abc. Method yang diberi dekorator @abstractmethod di dalam class turunan ABC membuat class itu tidak dapat diinstansiasi langsung, dan setiap subclass harus menulis isi method tersebut, sehingga semua class turunan mengikuti kontrak method yang sama (Lott & Phillips, 2021)."
+     ]
+    },
+    {
+     "judul": "Special Methods (Dunder Methods)",
+     "paragraf": [
+      "Special methods adalah method dengan nama diawali dan diakhiri dua garis bawah, seperti __str__, __len__, __add__, __mul__, dan __eq__. Method ini dipanggil otomatis oleh Python saat objek dicetak, diukur panjangnya, atau dipakai dalam operator, sehingga objek buatan sendiri dapat berperilaku seperti tipe bawaan (Lott & Phillips, 2021)."
+     ]
+    },
+    {
+     "judul": "Exception Handling dan Custom Exception",
+     "paragraf": [
+      "Exception handling dengan blok try, except, else, dan finally mencegah program berhenti tiba-tiba saat terjadi kesalahan runtime. Custom exception dibuat dengan mewarisi class Exception agar pesan kesalahan lebih spesifik sesuai aturan aplikasi. Penanganan exception perlu dirancang dengan cermat: penelitian pada proyek open source Java dan C# menemukan bahwa anti-pola penanganan exception, misalnya menangkap exception yang terlalu umum, banyak dijumpai dan dapat menyulitkan pemeliharaan program (de Pádua & Shang, 2017)."
+     ]
+    }
+   ],
+   "praktik": [
+    {
+     "item": "Abstraction (Abstraksi)",
+     "isi": [
+      {
+       "item": "Silahkan praktikkan contoh code di atas.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_abstraction.py"
+        },
+        {
+         "kode": "modul4/nomor_1/2025XXXXX_abstraction.py"
+        },
+        {
+         "output": "modul4/nomor_1/2025XXXXX_abstraction.py"
+        }
+       ]
+      },
+      {
+       "item": "Tambahkan class Persegi dengan atribut sisi pada abstraction.py lalu implementasikan method luas() dan keliling().",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_abstraction_latihan.py"
+        },
+        {
+         "kode": "modul4/nomor_1/2025XXXXX_abstraction_latihan.py",
+         "dari": 40,
+         "sampai": 48
+        }
+       ]
+      },
+      {
+       "item": "Instansiasi objek Persegi dan tampilkan luas serta kelilingnya menggunakan print().",
+       "isi": [
+        {
+         "kode": "modul4/nomor_1/2025XXXXX_abstraction_latihan.py",
+         "dari": 53,
+         "sampai": 53
+        },
+        {
+         "kode": "modul4/nomor_1/2025XXXXX_abstraction_latihan.py",
+         "dari": 60,
+         "sampai": 61
+        }
+       ]
+      },
+      {
+       "item": "Tambahkan parameter lain pada PersegiPanjang yaitu warna kemudian tampilkan warnanya dalam info objek.",
+       "isi": [
+        {
+         "kode": "modul4/nomor_1/2025XXXXX_abstraction_latihan.py",
+         "dari": 25,
+         "sampai": 38
+        },
+        {
+         "kode": "modul4/nomor_1/2025XXXXX_abstraction_latihan.py",
+         "dari": 52,
+         "sampai": 52
+        },
+        {
+         "kode": "modul4/nomor_1/2025XXXXX_abstraction_latihan.py",
+         "dari": 57,
+         "sampai": 57
+        }
+       ]
+      },
+      {
+       "item": "Capture hasil eksekusi program",
+       "isi": [
+        {
+         "output": "modul4/nomor_1/2025XXXXX_abstraction_latihan.py"
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul4/nomor_1]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "item": "Special Method",
+     "isi": [
+      {
+       "item": "Silahkan praktikkan contoh code di atas.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_special_methods.py"
+        },
+        {
+         "kode": "modul4/nomor_2/2025XXXXX_special_methods.py"
+        },
+        {
+         "output": "modul4/nomor_2/2025XXXXX_special_methods.py"
+        }
+       ]
+      },
+      {
+       "item": "Tambahkan method __len__ untuk mengembalikan panjang nama mahasiswa.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_special_methods_latihan.py"
+        },
+        {
+         "kode": "modul4/nomor_2/2025XXXXX_special_methods_latihan.py",
+         "dari": 11,
+         "sampai": 12
+        }
+       ]
+      },
+      {
+       "item": "Implementasikan method __eq__ untuk menyatakan dua mahasiswa sama jika nilai mereka sama.",
+       "isi": [
+        {
+         "kode": "modul4/nomor_2/2025XXXXX_special_methods_latihan.py",
+         "dari": 14,
+         "sampai": 15
+        }
+       ]
+      },
+      {
+       "item": "Buat minimal 2 objek Mahasiswa lalu tampilkan representasi string, perbandingan kesetaraan nilai dengan ==, operasi m1 + m2 dan m1 * 2, serta urutan dengan sorted(list_mahasiswa, key=lambda x: x.nilai).",
+       "isi": [
+        {
+         "kode": "modul4/nomor_2/2025XXXXX_special_methods_latihan.py",
+         "dari": 23,
+         "sampai": 46
+        }
+       ]
+      },
+      {
+       "item": "Capture hasil eksekusi program",
+       "isi": [
+        {
+         "output": "modul4/nomor_2/2025XXXXX_special_methods_latihan.py"
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul4/nomor_2]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "item": "Handling Exception",
+     "isi": [
+      {
+       "item": "Silahkan praktikkan contoh code di atas.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_operasi_matematika.py"
+        },
+        {
+         "kode": "modul4/nomor_3/2025XXXXX_operasi_matematika.py"
+        },
+        {
+         "output": "modul4/nomor_3/2025XXXXX_operasi_matematika.py"
+        }
+       ]
+      },
+      {
+       "item": "Tambahkan pesan khusus jika user memasukkan string kosong atau menekan Enter.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_operasi_latihan.py"
+        },
+        {
+         "kode": "modul4/nomor_3/2025XXXXX_operasi_latihan.py",
+         "dari": 11,
+         "sampai": 13
+        }
+       ]
+      },
+      {
+       "item": "Tambahkan validasi agar user hanya boleh memasukkan angka positif. Jika negatif tampilkan pesan error yang sesuai.",
+       "isi": [
+        {
+         "kode": "modul4/nomor_3/2025XXXXX_operasi_latihan.py",
+         "dari": 15,
+         "sampai": 20
+        }
+       ]
+      },
+      {
+       "item": "Gunakan blok else untuk menampilkan hasil hanya jika tidak ada exception.",
+       "isi": [
+        {
+         "kode": "modul4/nomor_3/2025XXXXX_operasi_latihan.py",
+         "dari": 33,
+         "sampai": 35
+        }
+       ]
+      },
+      {
+       "item": "Gunakan blok finally untuk menampilkan pesan \"Selesai memproses input.\"",
+       "isi": [
+        {
+         "kode": "modul4/nomor_3/2025XXXXX_operasi_latihan.py",
+         "dari": 36,
+         "sampai": 37
+        }
+       ]
+      },
+      {
+       "item": "Uji program untuk skenario berikut dan capture hasilnya: pembagian 10 dan 2, pembagian dengan penyebut 0, perkalian 5 dan 4, input kosong, dan input angka negatif.",
+       "isi": [
+        {
+         "output": "modul4/nomor_3/2025XXXXX_operasi_latihan.py"
+        }
+       ]
+      },
+      {
+       "item": "Capture hasil eksekusi tiap jenis error",
+       "isi": [
+        {
+         "teks": "Hasil tiap jenis error (penyebut nol, input kosong, dan angka negatif) terlihat pada capture poin f."
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul4/nomor_3]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "item": "Custom Exception",
+     "isi": [
+      {
+       "item": "Jalankan file di atas dan amati bagaimana custom exception bekerja.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_custom_exception.py"
+        },
+        {
+         "kode": "modul4/nomor_4/2025XXXXX_custom_exception.py"
+        },
+        {
+         "output": "modul4/nomor_4/2025XXXXX_custom_exception.py"
+        }
+       ]
+      },
+      {
+       "item": "Buat custom exception baru bernama UmurTerlaluMudaError yang dilempar jika umur < 5.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_custom_exception_latihan.py"
+        },
+        {
+         "kode": "modul4/nomor_4/2025XXXXX_custom_exception_latihan.py",
+         "dari": 6,
+         "sampai": 7
+        },
+        {
+         "kode": "modul4/nomor_4/2025XXXXX_custom_exception_latihan.py",
+         "dari": 15,
+         "sampai": 19
+        }
+       ]
+      },
+      {
+       "item": "Tambahkan validasi umur maksimum 100 dan buat custom exception UmurTerlaluTuaError.",
+       "isi": [
+        {
+         "kode": "modul4/nomor_4/2025XXXXX_custom_exception_latihan.py",
+         "dari": 9,
+         "sampai": 10
+        },
+        {
+         "kode": "modul4/nomor_4/2025XXXXX_custom_exception_latihan.py",
+         "dari": 20,
+         "sampai": 22
+        }
+       ]
+      },
+      {
+       "item": "Ubah program agar user dapat memasukkan umur berkali-kali hingga mendapat input yang valid.",
+       "isi": [
+        {
+         "kode": "modul4/nomor_4/2025XXXXX_custom_exception_latihan.py",
+         "dari": 29,
+         "sampai": 40
+        }
+       ]
+      },
+      {
+       "item": "Buat fungsi baru daftar_akun(umur) yang hanya menerima umur 18 ke atas, jika tidak raise exception custom AkunTidakDiizinkanError.",
+       "isi": [
+        {
+         "kode": "modul4/nomor_4/2025XXXXX_custom_exception_latihan.py",
+         "dari": 12,
+         "sampai": 13
+        },
+        {
+         "kode": "modul4/nomor_4/2025XXXXX_custom_exception_latihan.py",
+         "dari": 24,
+         "sampai": 27
+        },
+        {
+         "kode": "modul4/nomor_4/2025XXXXX_custom_exception_latihan.py",
+         "dari": 42,
+         "sampai": 45
+        }
+       ]
+      },
+      {
+       "item": "Capture hasil eksekusi program",
+       "isi": [
+        {
+         "output": "modul4/nomor_4/2025XXXXX_custom_exception_latihan.py"
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul4/nomor_4]"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "tugas": {
+    "pengantar": "Buat program OOP sederhana dengan ketentuan berikut:",
+    "isi": [
+     {
+      "item": "Abstraction",
+      "isi": [
+       {
+        "teks": "File: 2025XXXXX_Tugas_Modul4.py"
+       },
+       {
+        "item": "Abstract class Pengguna dengan atribut nama dan abstract method akses()",
+        "isi": [
+         {
+          "kode": "modul4/tugas/2025XXXXX_Tugas_Modul4.py",
+          "dari": 8,
+          "sampai": 14
+         }
+        ]
+       },
+       {
+        "item": "Class turunan Member dengan atribut poin dan implementasi akses() untuk menampilkan hak akses member",
+        "isi": [
+         {
+          "kode": "modul4/tugas/2025XXXXX_Tugas_Modul4.py",
+          "dari": 16,
+          "sampai": 24
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Special Methods pada class Member",
+      "isi": [
+       {
+        "item": "__str__() menampilkan \"Member: Nama – Poin: X\"",
+        "isi": [
+         {
+          "kode": "modul4/tugas/2025XXXXX_Tugas_Modul4.py",
+          "dari": 26,
+          "sampai": 27
+         }
+        ]
+       },
+       {
+        "item": "__add__() menjumlahkan poin dua member",
+        "isi": [
+         {
+          "kode": "modul4/tugas/2025XXXXX_Tugas_Modul4.py",
+          "dari": 29,
+          "sampai": 30
+         }
+        ]
+       },
+       {
+        "item": "__len__() mengembalikan panjang nama",
+        "isi": [
+         {
+          "kode": "modul4/tugas/2025XXXXX_Tugas_Modul4.py",
+          "dari": 32,
+          "sampai": 33
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Exception Handling",
+      "isi": [
+       {
+        "item": "Program meminta input poin dari user",
+        "isi": [
+         {
+          "kode": "modul4/tugas/2025XXXXX_Tugas_Modul4.py",
+          "dari": 35,
+          "sampai": 38
+         }
+        ]
+       },
+       {
+        "item": "Jika input bukan angka tangani dengan ValueError, jika input kosong tampilkan pesan kesalahan",
+        "isi": [
+         {
+          "kode": "modul4/tugas/2025XXXXX_Tugas_Modul4.py",
+          "dari": 39,
+          "sampai": 47
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Custom Exception",
+      "isi": [
+       {
+        "item": "Buat custom exception PoinTidakValidError",
+        "isi": [
+         {
+          "kode": "modul4/tugas/2025XXXXX_Tugas_Modul4.py",
+          "dari": 5,
+          "sampai": 6
+         }
+        ]
+       },
+       {
+        "item": "Jika poin < 0 raise PoinTidakValidError",
+        "isi": [
+         {
+          "kode": "modul4/tugas/2025XXXXX_Tugas_Modul4.py",
+          "dari": 17,
+          "sampai": 21
+         }
+        ]
+       },
+       {
+        "item": "Tangani exception tersebut di program utama",
+        "isi": [
+         {
+          "kode": "modul4/tugas/2025XXXXX_Tugas_Modul4.py",
+          "dari": 43,
+          "sampai": 44
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Buat 2 objek Member dan tampilkan info member, jumlah poin (m1 + m2), panjang nama (len(m1)), serta uji exception dengan memasukkan poin negatif dari input",
+      "isi": [
+       {
+        "kode": "modul4/tugas/2025XXXXX_Tugas_Modul4.py",
+        "dari": 49,
+        "sampai": 58
+       }
+      ]
+     },
+     {
+      "item": "Capture hasil eksekusi dan analisis",
+      "isi": [
+       {
+        "item": "Screen Capture",
+        "isi": [
+         {
+          "output": "modul4/tugas/2025XXXXX_Tugas_Modul4.py"
+         }
+        ]
+       },
+       {
+        "item": "Analisis",
+        "isi": [
+         {
+          "teks": "Pengguna adalah abstract class turunan ABC dengan abstract method akses(), sehingga tidak dapat diinstansiasi langsung. Member mewarisi Pengguna, memanggil super().__init__() untuk atribut nama, dan wajib mengimplementasikan akses(). Hasilnya terlihat pada baris hak akses Hendrik."
+         },
+         {
+          "teks": "Special methods membuat objek Member dapat dipakai seperti tipe bawaan. print(m1) memanggil __str__() dan menghasilkan \"Member: Hendrik – Poin: 120\", m1 + m2 memanggil __add__() dan menghasilkan 205 (120 + 85), sedangkan len(m1) memanggil __len__() dan menghasilkan 7, yaitu panjang nama Hendrik."
+         },
+         {
+          "teks": "Fungsi input_poin() mengulang permintaan sampai poin valid. Input kosong memunculkan pesan \"Poin tidak boleh kosong.\", input \"abc\" ditangkap sebagai ValueError, dan input -5 ditolak oleh constructor Member melalui PoinTidakValidError. Ketiga kesalahan ditangani tanpa menghentikan program, lalu poin 120 dan 85 diterima."
+         }
+        ]
+       },
+       {
+        "item": "Link GitHub",
+        "isi": [
+         {
+          "teks": "[link GitHub modul4/tugas]"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "judul": "Modul 5. GUI & Collections",
+   "tujuan": [
+    "Memahami konsep collections of objects menggunakan list dan dictionary.",
+    "Mengenal dasar-dasar pembuatan GUI dengan Tkinter.",
+    "Mampu menerapkan prinsip OOP dalam pengembangan aplikasi GUI.",
+    "Dapat mengintegrasikan objek OOP dengan komponen GUI.",
+    "Mampu membuat aplikasi GUI sederhana yang terintegrasi dengan data objek."
+   ],
+   "teori": [
+    {
+     "judul": "Collections of Objects",
+     "paragraf": [
+      "Collections of objects adalah cara menyimpan banyak objek dalam satu struktur data. List menyimpan objek secara berurutan dan diakses dengan indeks, dictionary menyimpan objek sebagai pasangan key–value sehingga pencarian berdasarkan kunci lebih cepat, sedangkan tuple menyimpan kumpulan objek yang tidak berubah (Lott & Phillips, 2021)."
+     ]
+    },
+    {
+     "judul": "GUI dengan Tkinter",
+     "paragraf": [
+      "Graphical User Interface (GUI) memungkinkan pengguna berinteraksi melalui elemen visual seperti tombol, kotak teks, dan tabel. Tkinter adalah pustaka GUI bawaan Python yang menyediakan widget seperti Label, Entry, Button, dan Treeview. Python dengan pustaka GUI-nya mudah dipelajari, sehingga dipakai dalam pelatihan pembuatan aplikasi GUI bagi guru dan siswa SMK (Zakaria dkk., 2022)."
+     ]
+    },
+    {
+     "judul": "OOP dalam Pengembangan GUI",
+     "paragraf": [
+      "Pada aplikasi GUI berbasis OOP, jendela dan komponennya dibungkus dalam sebuah class sehingga data dan aksi tombol tersusun rapi sebagai atribut dan method. Pendekatan ini dipakai, misalnya, pada sistem GUI berbasis database dengan Python untuk mengelola data mahasiswa asrama FKIP UHAMKA yang memperoleh skor System Usability Scale 73,654 sehingga dinilai mudah digunakan (Amuru & Dzikrillah, 2024)."
+     ]
+    }
+   ],
+   "praktik": [
+    {
+     "item": "Collections of Objects",
+     "isi": [
+      {
+       "teks": "File: 2025XXXXX_collections_objects.py"
+      },
+      {
+       "kode": "modul5/nomor_1/2025XXXXX_collections_objects.py"
+      },
+      {
+       "output": "modul5/nomor_1/2025XXXXX_collections_objects.py"
+      },
+      {
+       "item": "Buat class Buku dengan atribut: judul, penulis, tahun.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_buku_list.py"
+        },
+        {
+         "kode": "modul5/nomor_1/2025XXXXX_buku_list.py",
+         "dari": 3,
+         "sampai": 10
+        }
+       ]
+      },
+      {
+       "item": "Buat list yang berisi 5 objek buku.",
+       "isi": [
+        {
+         "kode": "modul5/nomor_1/2025XXXXX_buku_list.py",
+         "dari": 12,
+         "sampai": 19
+        }
+       ]
+      },
+      {
+       "item": "Implementasikan fungsi untuk mencari buku berdasarkan penulis.",
+       "isi": [
+        {
+         "kode": "modul5/nomor_1/2025XXXXX_buku_list.py",
+         "dari": 21,
+         "sampai": 22
+        }
+       ]
+      },
+      {
+       "item": "Tampilkan hasil pencarian.",
+       "isi": [
+        {
+         "kode": "modul5/nomor_1/2025XXXXX_buku_list.py",
+         "dari": 24,
+         "sampai": 34
+        },
+        {
+         "output": "modul5/nomor_1/2025XXXXX_buku_list.py"
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul5/nomor_1]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "item": "Dictionary of Objects",
+     "isi": [
+      {
+       "teks": "File: 2025XXXXX_dictionary_objects.py"
+      },
+      {
+       "kode": "modul5/nomor_2/2025XXXXX_dictionary_objects.py"
+      },
+      {
+       "output": "modul5/nomor_2/2025XXXXX_dictionary_objects.py"
+      },
+      {
+       "item": "Buat class Pelanggan dengan atribut: id_pelanggan, nama, email.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_pelanggan_dict.py"
+        },
+        {
+         "kode": "modul5/nomor_2/2025XXXXX_pelanggan_dict.py",
+         "dari": 3,
+         "sampai": 10
+        }
+       ]
+      },
+      {
+       "item": "Buat dictionary yang menyimpan objek pelanggan dengan id sebagai key.",
+       "isi": [
+        {
+         "kode": "modul5/nomor_2/2025XXXXX_pelanggan_dict.py",
+         "dari": 12,
+         "sampai": 13
+        }
+       ]
+      },
+      {
+       "item": "Implementasikan fungsi untuk menambah, menghapus, dan mencari pelanggan.",
+       "isi": [
+        {
+         "kode": "modul5/nomor_2/2025XXXXX_pelanggan_dict.py",
+         "dari": 15,
+         "sampai": 27
+        }
+       ]
+      },
+      {
+       "item": "Tampilkan seluruh daftar pelanggan.",
+       "isi": [
+        {
+         "kode": "modul5/nomor_2/2025XXXXX_pelanggan_dict.py",
+         "dari": 29,
+         "sampai": 47
+        }
+       ]
+      },
+      {
+       "item": "Capture hasil eksekusi program",
+       "isi": [
+        {
+         "output": "modul5/nomor_2/2025XXXXX_pelanggan_dict.py"
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul5/nomor_2]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "item": "Konsep GUI dengan Python Tkinter",
+     "isi": [
+      {
+       "teks": "File: 2025XXXXX_gui_dasar.py"
+      },
+      {
+       "kode": "modul5/nomor_3/2025XXXXX_gui_dasar.py"
+      },
+      {
+       "gambar": [
+        "m5_nomor_3_gui_dasar_gui1.png",
+        "m5_nomor_3_gui_dasar_gui2.png"
+       ]
+      },
+      {
+       "item": "Buat aplikasi GUI dengan 3 komponen: Label, Entry, dan Button.",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_gui_latihan.py"
+        },
+        {
+         "kode": "modul5/nomor_3/2025XXXXX_gui_latihan.py",
+         "dari": 6,
+         "sampai": 20
+        }
+       ]
+      },
+      {
+       "item": "Tambahkan fungsi untuk menampilkan isi Entry di messagebox ketika button diklik.",
+       "isi": [
+        {
+         "kode": "modul5/nomor_3/2025XXXXX_gui_latihan.py",
+         "dari": 22,
+         "sampai": 27
+        }
+       ]
+      },
+      {
+       "item": "Tambahkan button untuk menghapus isi Entry.",
+       "isi": [
+        {
+         "kode": "modul5/nomor_3/2025XXXXX_gui_latihan.py",
+         "dari": 29,
+         "sampai": 30
+        }
+       ]
+      },
+      {
+       "item": "Capture tampilan GUI",
+       "isi": [
+        {
+         "gambar": [
+          "m5_nomor_3_gui_latihan_gui1.png",
+          "m5_nomor_3_gui_latihan_gui2.png",
+          "m5_nomor_3_gui_latihan_gui3.png"
+         ]
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul5/nomor_3]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "item": "OOP dalam Pengembangan GUI",
+     "isi": [
+      {
+       "teks": "File: 2025XXXXX_kalkulator_gui.py"
+      },
+      {
+       "kode": "modul5/nomor_4/2025XXXXX_kalkulator_gui.py"
+      },
+      {
+       "gambar": [
+        "m5_nomor_4_kalkulator_gui_gui1.png",
+        "m5_nomor_4_kalkulator_gui_gui2.png"
+       ]
+      },
+      {
+       "item": "Buat aplikasi GUI untuk konversi suhu (Celsius ke Fahrenheit).",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_konversi_suhu.py"
+        },
+        {
+         "kode": "modul5/nomor_4/2025XXXXX_konversi_suhu.py",
+         "dari": 38,
+         "sampai": 39
+        }
+       ]
+      },
+      {
+       "item": "Gunakan class untuk mengorganisir komponen GUI.",
+       "isi": [
+        {
+         "kode": "modul5/nomor_4/2025XXXXX_konversi_suhu.py",
+         "dari": 6,
+         "sampai": 22
+        }
+       ]
+      },
+      {
+       "item": "Tambahkan validasi input.",
+       "isi": [
+        {
+         "kode": "modul5/nomor_4/2025XXXXX_konversi_suhu.py",
+         "dari": 24,
+         "sampai": 37
+        }
+       ]
+      },
+      {
+       "item": "Capture tampilan GUI",
+       "isi": [
+        {
+         "gambar": [
+          "m5_nomor_4_konversi_suhu_gui1.png",
+          "m5_nomor_4_konversi_suhu_gui2.png",
+          "m5_nomor_4_konversi_suhu_gui3.png"
+         ]
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul5/nomor_4]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "item": "Integrasi Sederhana: GUI dengan Collections of Objects",
+     "isi": [
+      {
+       "teks": "File: 2025XXXXX_manajemen_buku_gui.py"
+      },
+      {
+       "kode": "modul5/nomor_5/2025XXXXX_manajemen_buku_gui.py"
+      },
+      {
+       "gambar": [
+        "m5_nomor_5_manajemen_buku_gui_gui1.png",
+        "m5_nomor_5_manajemen_buku_gui_gui2.png"
+       ]
+      },
+      {
+       "item": "Buat aplikasi GUI untuk manajemen tugas (to-do list).",
+       "isi": [
+        {
+         "teks": "File: 2025XXXXX_todo_gui.py"
+        },
+        {
+         "kode": "modul5/nomor_5/2025XXXXX_todo_gui.py",
+         "dari": "^class AplikasiTodo",
+         "sampai": "self\\.tree\\.bind"
+        }
+       ]
+      },
+      {
+       "item": "Gunakan list of objects untuk menyimpan data tugas.",
+       "isi": [
+        {
+         "kode": "modul5/nomor_5/2025XXXXX_todo_gui.py",
+         "dari": "^class Tugas",
+         "sampai": "return \"Selesai\""
+        },
+        {
+         "kode": "modul5/nomor_5/2025XXXXX_todo_gui.py",
+         "dari": "self\\.daftar_tugas = \\[\\]",
+         "sampai": "self\\.daftar_tugas = \\[\\]"
+        }
+       ]
+      },
+      {
+       "item": "Implementasikan fitur: tambah, hapus, edit, dan tandai selesai.",
+       "isi": [
+        {
+         "kode": "modul5/nomor_5/2025XXXXX_todo_gui.py",
+         "dari": "    def tambah",
+         "sampai": "^if __name__"
+        }
+       ]
+      },
+      {
+       "item": "Tampilkan tugas dalam Treeview atau Listbox.",
+       "isi": [
+        {
+         "kode": "modul5/nomor_5/2025XXXXX_todo_gui.py",
+         "dari": "    def tampilkan",
+         "sampai": "values=\\(t\\.judul"
+        }
+       ]
+      },
+      {
+       "item": "Capture tampilan GUI",
+       "isi": [
+        {
+         "gambar": [
+          "m5_nomor_5_todo_gui_gui1.png",
+          "m5_nomor_5_todo_gui_gui2.png"
+         ]
+        }
+       ]
+      },
+      {
+       "item": "Link GitHub",
+       "isi": [
+        {
+         "teks": "[link GitHub modul5/nomor_5]"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "tugas": {
+    "pengantar": "Buat aplikasi GUI untuk sistem manajemen mahasiswa dengan ketentuan berikut:",
+    "isi": [
+     {
+      "item": "Class Mahasiswa:",
+      "isi": [
+       {
+        "teks": "File: 2025XXXXX_Tugas_Modul5.py"
+       },
+       {
+        "item": "Atribut: nim, nama, jurusan, ipk",
+        "isi": [
+         {
+          "kode": "modul5/tugas/2025XXXXX_Tugas_Modul5.py",
+          "dari": "^class Mahasiswa",
+          "sampai": "self\\.ipk = ipk$"
+         }
+        ]
+       },
+       {
+        "item": "Methods: __init__, info, update_ipk",
+        "isi": [
+         {
+          "kode": "modul5/tugas/2025XXXXX_Tugas_Modul5.py",
+          "dari": "    def info",
+          "sampai": "self\\.ipk = ipk_baru"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Collections:",
+      "isi": [
+       {
+        "item": "Gunakan dictionary untuk menyimpan objek mahasiswa dengan NIM sebagai key",
+        "isi": [
+         {
+          "kode": "modul5/tugas/2025XXXXX_Tugas_Modul5.py",
+          "dari": "^class DataMahasiswa",
+          "sampai": "self\\.data = \\{\\}"
+         }
+        ]
+       },
+       {
+        "item": "Implementasikan fungsi untuk: tambah, hapus, cari, dan tampilkan semua mahasiswa",
+        "isi": [
+         {
+          "kode": "modul5/tugas/2025XXXXX_Tugas_Modul5.py",
+          "dari": "    def tambah\\(self, mhs",
+          "sampai": "jurusan == jurusan\\]"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "GUI Requirements:",
+      "isi": [
+       {
+        "item": "Frame input data mahasiswa (NIM, Nama, Jurusan, IPK)",
+        "isi": [
+         {
+          "kode": "modul5/tugas/2025XXXXX_Tugas_Modul5.py",
+          "dari": "# frame input",
+          "sampai": "self\\.jurusan\\.grid"
+         }
+        ]
+       },
+       {
+        "item": "Tombol untuk operasi CRUD (Create, Read, Update, Delete)",
+        "isi": [
+         {
+          "kode": "modul5/tugas/2025XXXXX_Tugas_Modul5.py",
+          "dari": "# tombol CRUD",
+          "sampai": "side=tk\\.LEFT, padx=4\\)$"
+         },
+         {
+          "kode": "modul5/tugas/2025XXXXX_Tugas_Modul5.py",
+          "dari": "    def tambah\\(self\\):",
+          "sampai": "NIM tidak ditemukan"
+         }
+        ]
+       },
+       {
+        "item": "Treeview atau Listbox untuk menampilkan daftar mahasiswa",
+        "isi": [
+         {
+          "kode": "modul5/tugas/2025XXXXX_Tugas_Modul5.py",
+          "dari": "# treeview daftar",
+          "sampai": "self\\.tree\\.bind"
+         },
+         {
+          "kode": "modul5/tugas/2025XXXXX_Tugas_Modul5.py",
+          "dari": "    def tampilkan",
+          "sampai": "self\\.status\\.config"
+         }
+        ]
+       },
+       {
+        "item": "Fitur pencarian berdasarkan NIM atau Nama",
+        "isi": [
+         {
+          "kode": "modul5/tugas/2025XXXXX_Tugas_Modul5.py",
+          "dari": "# pencarian dan filter",
+          "sampai": "text=\"Cari\""
+         },
+         {
+          "kode": "modul5/tugas/2025XXXXX_Tugas_Modul5.py",
+          "dari": "    def cari\\(self\\)",
+          "sampai": "koleksi\\.cari\\(kata\\)"
+         }
+        ]
+       },
+       {
+        "item": "Fitur filter berdasarkan jurusan",
+        "isi": [
+         {
+          "kode": "modul5/tugas/2025XXXXX_Tugas_Modul5.py",
+          "dari": "text=\"Filter jurusan",
+          "sampai": "ComboboxSelected"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Fitur Tambahan:",
+      "isi": [
+       {
+        "item": "Hitung rata-rata IPK semua mahasiswa",
+        "isi": [
+         {
+          "kode": "modul5/tugas/2025XXXXX_Tugas_Modul5.py",
+          "dari": "    def rata_rata",
+          "sampai": "else 0\\.0"
+         }
+        ]
+       },
+       {
+        "item": "Tampilkan mahasiswa dengan IPK tertinggi",
+        "isi": [
+         {
+          "kode": "modul5/tugas/2025XXXXX_Tugas_Modul5.py",
+          "dari": "    def tertinggi",
+          "sampai": "default=None"
+         }
+        ]
+       },
+       {
+        "item": "Eksport data ke file teks",
+        "isi": [
+         {
+          "kode": "modul5/tugas/2025XXXXX_Tugas_Modul5.py",
+          "dari": "    def ekspor\\(self, nama_file",
+          "sampai": "f\\.write"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Instruksi:",
+      "isi": [
+       {
+        "item": "Implementasikan aplikasi dengan pendekatan OOP",
+        "isi": [
+         {
+          "teks": "Program disusun dalam tiga class: Mahasiswa untuk data satu mahasiswa, DataMahasiswa untuk koleksi, dan AplikasiMahasiswa untuk tampilan GUI."
+         }
+        ]
+       },
+       {
+        "item": "Gunakan module tkinter untuk GUI",
+        "isi": [
+         {
+          "kode": "modul5/tugas/2025XXXXX_Tugas_Modul5.py",
+          "dari": "^import tkinter",
+          "sampai": "^from tkinter"
+         }
+        ]
+       },
+       {
+        "item": "Pastikan kode terstruktur dan mudah dibaca",
+        "isi": [
+         {
+          "teks": "Setiap bagian tampilan dibuat dalam frame terpisah dan setiap tombol memanggil satu method dengan nama yang menjelaskan tugasnya."
+         }
+        ]
+       },
+       {
+        "item": "Tambahkan validasi input",
+        "isi": [
+         {
+          "kode": "modul5/tugas/2025XXXXX_Tugas_Modul5.py",
+          "dari": "    def baca_form",
+          "sampai": "return Mahasiswa\\(nim"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "item": "Capture eksekusi dan penjelasan kode",
+      "isi": [
+       {
+        "item": "Screen Capture",
+        "isi": [
+         {
+          "item": "Lima mahasiswa ditambahkan melalui form",
+          "isi": [
+           {
+            "gambar": [
+             "m5_tugas_Tugas_Modul5_gui1.png"
+            ]
+           }
+          ]
+         },
+         {
+          "item": "Validasi NIM bukan angka dan IPK di luar rentang",
+          "isi": [
+           {
+            "gambar": [
+             "m5_tugas_Tugas_Modul5_gui2.png",
+             "m5_tugas_Tugas_Modul5_gui3.png"
+            ]
+           }
+          ]
+         },
+         {
+          "item": "Update IPK Rudi Hartono menjadi 3.35 dan hapus data Fajar Ramadhan",
+          "isi": [
+           {
+            "gambar": [
+             "m5_tugas_Tugas_Modul5_gui4.png"
+            ]
+           }
+          ]
+         },
+         {
+          "item": "Pencarian kata \"siti\" dan filter jurusan Sistem Informasi",
+          "isi": [
+           {
+            "gambar": [
+             "m5_tugas_Tugas_Modul5_gui5.png"
+            ]
+           },
+           {
+            "gambar": [
+             "m5_tugas_Tugas_Modul5_gui6.png"
+            ]
+           }
+          ]
+         },
+         {
+          "item": "Rata-rata IPK, IPK tertinggi, dan ekspor ke file teks",
+          "isi": [
+           {
+            "gambar": [
+             "m5_tugas_Tugas_Modul5_gui7.png",
+             "m5_tugas_Tugas_Modul5_gui8.png"
+            ]
+           },
+           {
+            "gambar": [
+             "m5_tugas_Tugas_Modul5_gui9.png"
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "item": "Penjelasan Kode",
+        "isi": [
+         {
+          "teks": "Class Mahasiswa menyimpan nim, nama, jurusan, dan ipk. Method info() menyusun ringkasan data, sedangkan update_ipk() mengubah IPK dengan validasi rentang 0.00 sampai 4.00. Class DataMahasiswa menyimpan objek mahasiswa dalam dictionary dengan NIM sebagai key, sehingga NIM ganda ditolak dan pencarian per NIM langsung lewat key."
+         },
+         {
+          "teks": "Class AplikasiMahasiswa membangun GUI: form input, tombol CRUD, kolom pencarian, combobox filter jurusan, Treeview, tombol fitur tambahan, dan status bar. Method baca_form() memeriksa input sebelum objek dibuat. Pada capture, NIM \"20251A\" ditolak karena bukan angka dan IPK 4.5 ditolak karena melebihi 4.00."
+         },
+         {
+          "teks": "Setelah IPK Rudi Hartono diubah menjadi 3.35 dan data Fajar Ramadhan dihapus, tabel berisi empat mahasiswa. Pencarian \"siti\" menampilkan satu data, filter Sistem Informasi menampilkan dua data, rata-rata IPK empat mahasiswa adalah 3.62, IPK tertinggi dimiliki Dewi Lestari (3.86), dan ekspor menulis empat baris ke data_mahasiswa.txt."
+         }
+        ]
+       },
+       {
+        "item": "Link GitHub",
+        "isi": [
+         {
+          "teks": "[link GitHub modul5/tugas]"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "referensi": [
+  "Amuru, I., & Dzikrillah, A. R. (2024). Database-based GUI system to increase the effectiveness of student data management in the FKIP UHAMKA dormitory. *Jurnal Teknik Informatika (JUTIF), 5*(4), 21–31. https://doi.org/10.52436/1.jutif.2024.5.4.1981",
+  "de Pádua, G. B., & Shang, W. (2017). Studying the prevalence of exception handling anti-patterns. Dalam *Proceedings of the 25th IEEE/ACM International Conference on Program Comprehension (ICPC)* (hlm. 328–331). IEEE. https://doi.org/10.1109/ICPC.2017.1",
+  "Fakhri, M. A., Aknuranda, I., & Pramono, D. (2018). Implementasi sistem informasi showroom mobil (SISMOB) dengan pemrograman berbasis objek (studi kasus: UD. Tomaru Oto). *Jurnal Pengembangan Teknologi Informasi dan Ilmu Komputer, 2*(9). Universitas Brawijaya.",
+  "Lott, S. F., & Phillips, D. (2021). *Python object-oriented programming* (4th ed.). Packt Publishing.",
+  "Ritonga, R. D., Lesmana, I. D., Ginting, T. W., & Asrul, M. A. B. (2026). Peningkatan literasi digital siswa SMK Multi Karya Medan melalui pelatihan pemrograman Python berbasis objek. *Abdi: Jurnal Pengabdian dan Pemberdayaan Masyarakat, 8*(3), 927–934. https://doi.org/10.24036/abdi.v8i3.2017",
+  "Tempero, E., Noble, J., & Melton, H. (2008). How do Java programs use inheritance? An empirical study of inheritance in Java software. Dalam *ECOOP 2008 – Object-Oriented Programming* (Lecture Notes in Computer Science, Vol. 5142, hlm. 667–691). Springer. https://doi.org/10.1007/978-3-540-70592-5_28",
+  "Voigt, J., Irwin, W., & Churcher, N. (2010). Class encapsulation and object encapsulation: An empirical study. Dalam *Proceedings of the 5th International Conference on Evaluation of Novel Approaches to Software Engineering (ENASE)* (hlm. 171–178). SciTePress. https://doi.org/10.5220/0002924701710178",
+  "Zakaria, D., Muttaqin, M. H., Suranegara, G. M., Irawan, E. N., & Venica, L. (2022). The training of making graphical user interface (GUI) using Python for teachers and students of engineering vocational school in Purwakarta. *REKA ELKOMIKA: Jurnal Pengabdian kepada Masyarakat, 3*(3), 152–159. https://doi.org/10.26760/rekaelkomika.v3i3.152-159"
+ ],
+ "gaya_pustaka": "apa"
+}
