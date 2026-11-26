@@ -8,12 +8,12 @@
 
 **Lampirkan modul, sebut nama dan NIM. Kode, screenshot, dan laporan dikerjakan sampai siap diperiksa.**
 
-[![GitHub stars](https://img.shields.io/github/stars/bastiandoublen/laporan-praktikum?style=flat-square)](https://github.com/bastiandoublen/laporan-praktikum/stargazers)
-[![MIT license](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE)
-[![Agent Skills](https://img.shields.io/badge/format-Agent%20Skills-blue?style=flat-square)](SKILL.md)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3776ab?style=flat-square&logo=python&logoColor=white)](#kebutuhan)
-[![Platform: Windows](https://img.shields.io/badge/platform-Windows-0078d4?style=flat-square)](#kebutuhan)
-[![Output: docx dan PDF](https://img.shields.io/badge/output-docx_dan_PDF-2b579a?style=flat-square)](#struktur-laporan)
+[![MIT license](docs/assets/badges/license.svg)](LICENSE)
+[![Agent Skills](docs/assets/badges/agent-skills.svg)](SKILL.md)
+[![Python 3.10+](docs/assets/badges/python.svg)](#kebutuhan)
+[![Platform: Windows](docs/assets/badges/windows.svg)](#kebutuhan)
+[![Editor: Antigravity atau VS Code](docs/assets/badges/editor.svg)](#kebutuhan)
+[![Output: docx dan PDF](docs/assets/badges/output.svg)](#struktur-laporan)
 
 [Mulai cepat](#mulai-cepat) · [Cara kerja](#cara-kerja) · [Fitur](#fitur) · [Showcase](#showcase) · [Struktur laporan](#struktur-laporan) · [FAQ](#faq) · [Kontribusi](#kontribusi)
 

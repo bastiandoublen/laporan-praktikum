@@ -6,9 +6,10 @@
 
 ### An AI agent skill that turns a lecturer's lab module into a clean Word lab report.
 
-[![MIT license](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](../LICENSE)
-[![Agent Skills](https://img.shields.io/badge/format-Agent%20Skills-blue?style=flat-square)](../SKILL.md)
-[![Platform: Windows](https://img.shields.io/badge/platform-Windows-0078d4?style=flat-square)](#requirements)
+[![MIT license](assets/badges/license.svg)](../LICENSE)
+[![Agent Skills](assets/badges/agent-skills.svg)](../SKILL.md)
+[![Platform: Windows](assets/badges/windows.svg)](#requirements)
+[![Editor: Antigravity or VS Code](assets/badges/editor.svg)](#requirements)
 
 </div>
 
